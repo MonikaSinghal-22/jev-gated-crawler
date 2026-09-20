@@ -1,0 +1,22 @@
+[project]
+name = "jev-crawler"
+version = "0.1.0"
+description = "Web crawler with Jev (TypeSafe AI) gatekeeper for intelligent link filtering"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx",
+    "beautifulsoup4",
+    "lxml",
+    "python-dotenv",
+    "streamlit",
+]
+
+[project.scripts]
+jev-crawler = "jev_crawler.main:main"
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
